@@ -1,46 +1,49 @@
 import random
 print("your account num is",random.randrange(5000000,6000000))
 User=input("enter user name:")
-def gmail_check(gmail):
-    '''enter the gmail is right'''
-    SpecialSym=['@','outlook','gmail']
-    if not any(char in SpecialSym for char in gmail):
-        print("invalid email")
-        ge()
 def ge():
-    print(gmail_check.__doc__)
-    gmail = input('enter the gmail: ')
-    print(gmail_check(gmail))
-    print("gmail is:",gmail)
+  gmail=input("enter the gmail:")
+  if "@"in gmail:
+    if "outlook" in gmail or "gmail" in gmail:
+      print("")
+    else:
+      print("invalid gmail")
+      ge() 
+  else:
+    print("check the  gmail")
+    ge()
 ge()
 def passwd_check(passwd):
-    '''enter the password is right'''
+    '''enter the correct password'''
     SpecialSym=['$','@','#']
     if len(passwd) < 6:
-        pas()
+      print("enter the correct password")
+      pas()
     if len(passwd) > 10:
-        pas()
+      pas()
     if not any(char.isdigit() for char in passwd):
-        print("invalid password")
-        paas()
+      print("invalid password")
+      pas()
     if not any(char.isupper() for char in passwd):
-        print("invalid password")
-        pas()
+      print("invalid password")
+      pas()
     if not any(char.islower() for char in passwd):
-        print("invalid password")
-        pas()
+      print("invalid password")
+      pas()
     if not any(char in SpecialSym for char in passwd):
-        print("invalid password")
-        pas()
+      print("invalid password")
+      pas()
+    return("")
 def pas():
     print(passwd_check.__doc__)
     passwd = input('enter the password : ')
     print(passwd_check(passwd))
     print("password is:",passwd)
+    return
 pas()
-while true:
-    mobilenum=input("enter pass:")
-    if len(mobilenum)!=10 or mobilenum[0]!="9":
+while True:
+    mobilenum=input("enter mobile num:")
+    if len(mobilenum)!=10:
         print("invalid,enter regain number")
         continue
     else:
@@ -79,6 +82,10 @@ def opt():
     if Option==4:
         exit()
 opt()
+
+
+
+
 
 
 
