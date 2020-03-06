@@ -1,0 +1,10 @@
+import re
+k=input()
+rest="".join(re.split("[^a-z]*",k))
+rest1="".join(re.split("[^A-Z]*",k))
+rest2="".join(re.split("[^0-9]*",k))
+rest3="".join(re.split("[^!,@,$,%,&,*,(,),#,?]*",k))
+print(str(rest))
+print(str(rest1))
+print(str(rest2))
+print(str(rest3))
